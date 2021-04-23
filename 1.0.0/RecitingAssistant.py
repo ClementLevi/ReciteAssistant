@@ -587,6 +587,36 @@ def split_yield(text):
 # 写不下了我换个文档
 
 
+# Shell界面下主菜单
+def main():
+    def shell_start():
+        def shell_select_test():
+        pass
+    def shell_manage():
+        pass
+    def shell_setting():
+        pass
+    def shell_about_and_help():
+        pass
+    def shell_exit():
+        if input("「真的要退出吗（Y/N）：」") == 'Y':
+            exit()
+        else:
+        return 0
+
+    while(1):
+        print("""
+        ----[欢迎来到背书辅助器（Shell版）]----
+        主菜单：
+        【0】开始背诵默写
+        【1】管理现有文档
+        【2】设置
+        【3】关于与帮助
+        【E】退出程序
+        """)
+        menu_order = input("> ")
+        menu_func = {'0':'start', '1':'manage', '2':'setting', '3':'about_and_help', 'E':'exit'}
+        eval("shell_"+menu_func[menu_order])()
 ## 测试信息
 if __name__ == "__main__":
 
@@ -611,13 +641,14 @@ if __name__ == "__main__":
 
     # shell_save_article()
 
-    c = TestGiver()
-    c.open_articlef(input("新文件名："))
-    c.Article.show_basic_info(1)
-    c.Article.show_text(1)
+    # c = TestGiver()
+    # c.open_articlef(input("新文件名："))
+    # c.Article.show_basic_info(1)
+    # c.Article.show_text(1)
 
-    test1 = c.new_test(10)
-    print('\n', test1["exam"])
+    # test1 = c.new_test(10)
+    # print('\n', test1["exam"])
 
-    print("\nanswer: ", test1["answer"])
+    # print("\nanswer: ", test1["answer"])
 
+    main()					
