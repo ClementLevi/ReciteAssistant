@@ -4,7 +4,7 @@ from tkinter import messagebox, filedialog, colorchooser
 # from RecitingAssistant import *
 
 _version = 'v1.0.0'
-
+"I want to know whether this can be logged in to Git by the app 'Code' on my iPad"
 class TimerSimple():
     def __init__(self):
         self.time_start = None
