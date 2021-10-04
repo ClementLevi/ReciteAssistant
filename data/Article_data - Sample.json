@@ -1,0 +1,53 @@
+/*2021年4月7日制作的蓝图。已容纳部分未来可能开发的功能
+JSON里不能有注释，记得删掉*/
+
+{
+    "basic":{
+        "title": "Test Article",
+        "original_text": "There will be blood. 337845818. ",
+        "index": 0,
+        "date": "",
+        "text_type": "Latin(English)",
+        "submitter": "Clement_Levi",
+        "author": "Rusty Lake",
+        "RSS": "",
+        "encoding":"utf-8"
+    },
+    "test_info":{
+        "test_count": 1,
+        "test_record":{
+            "20210407-131856": [0, "78", "第一位是错了几个，第二位是花费时间（秒），这个是结语、感想什么的"]}
+    },
+
+    "content":{
+        "0": {
+            "word": "There",
+            "bw": 100,
+            "Fw": 0,
+            "Mw": 0},
+        "1":{
+            "word": "will",
+            "bw": 100,
+            "Fw": 0,
+            "Mw": 0},
+        "2":{
+            "word": "be",
+            "bw": 100,
+            "Fw": 0,
+            "Mw": 0},
+        "3":{
+            "word": "blood.",
+            "bw": 100,
+            "Fw": 0,
+            "Mw": 0}
+    },
+
+    "comments":{
+        "idlist":{
+            "c1": ["0", "1", "2", "3"],
+            "c2": ["0"]},
+        "comments_content":{
+            "c1": "What the hell is this sentence?",
+            "c2": "A single comment."}
+    }
+}
