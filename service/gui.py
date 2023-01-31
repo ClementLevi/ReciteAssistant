@@ -1,59 +1,10 @@
 import time
 import tkinter as tk
 from tkinter import messagebox, filedialog, colorchooser
-# from RecitingAssistant import *
 
-_version = 'v1.0.0'
+
 "I want to know whether this can be logged in to Git by the app 'Code' on my iPad"
-class TimerSimple():
-    def __init__(self):
-        self.time_start = None
-        self.time_stop = None
-        self.standby = None
-        self.timerecord = None
-        self.tick = self.format_ticktock()
 
-    def _ticktock(self):
-        if self.standby == None:
-            self.standby = False
-            self.time_start = time.time()
-        elif self.standby == False:
-            self.standby = True
-            self.time_stop = time.time()
-            self.timerecord = self.time_stop - self.time_start
-            return self._format()
-        else:
-            self.standby = None
-            self.time_stop = None
-            self.standby = None
-            self.timerecord = None
-            return 0
-
-    def _format(self):
-        sec = int(self.timerecord)
-        ms = int((self.timerecord - sec)*1000)
-        clock = {'h':0, 'm':0, 's':0, 'ms':0}
-        clock['h'] = sec//3600
-        clock['m'] = sec//60
-        clock['s'] = sec%60
-        clock['ms']= ms
-        return clock
-    
-    def format_ticktock(self):
-        self._ = []
-        def outer():
-            def inner():
-                self._.append(0)
-                if len(self._)==3:
-                    self._=[]
-                return self._ticktock
-            return inner
-
-        try:
-            d = outer()
-            return str(d['h']).ljust(2,'0')+":"+str(d['m']).ljust(2,'0')+":"+str(d['s']).ljust(2,'0')+":"+str(d['ms']).ljust(3,'0')
-        except:
-            return None
 
 
 class UI():
@@ -267,3 +218,17 @@ class UI():
 
 if __name__ == '__main__':
     GUI = UI()
+
+# TODO: 可以做成单独一个窗口放答题卡，用下面的方式生成答题卡
+# class A:
+#     def __init__(self, ans):
+#         self.ans = ans
+#         self.sheet = []
+#         self.win = tk.Tk()
+#         for i in range(len(self.ans)):
+#             self.sheet.append(tk.Entry(self.win))
+#             print(i, self.sheet[i])
+#             self.sheet[i].pack()
+
+            
+# a = A(['1','2','3'])
